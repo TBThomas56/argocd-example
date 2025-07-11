@@ -1,0 +1,6 @@
+apiVersion: v2
+name: argo-hello-frontend
+description: Basic example of exposing a frontend service to be deployed on ArgoCD
+type: application
+version: 0.1.0
+appVersion: 0.0.1
