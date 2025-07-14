@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+spec:
+  project: iza78587
+  source:
+    repoURL: https://github.com/TBThomas56/argocd-example.git
+    path: charts/nginx
+    targetRevision: two-apps
+  destination:
+    name: argus
+    namespace: iza78587
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
