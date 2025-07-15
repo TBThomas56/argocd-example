@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-argo
+  name: app-of-apps
 spec:
   project: iza78587
   source:
     repoURL: https://github.com/TBThomas56/argocd-example.git
-    path: charts/frontend-app
-    targetRevision: HEAD
+    path: charts/apps
+    targetRevision: app-of-apps
   destination:
     name: argus
     namespace: iza78587
