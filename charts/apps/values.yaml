@@ -1,0 +1,9 @@
+apps:
+- name: hello-argo
+  repoURL: https://github.com/TBThomas56/argocd-example.git
+  path: charts/frontend-app
+  targetRevision: HEAD
+- name: nginx
+  repoURL: https://github.com/TBThomas56/argocd-example.git
+  path: charts/nginx
+  targetRevision: app-of-apps
